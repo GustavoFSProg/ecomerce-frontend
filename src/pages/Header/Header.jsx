@@ -20,9 +20,9 @@ function Header() {
             style={{
               // display: 'flex',
               listStyle: 'none',
-              fontFamily: 'Trebuchet',
-              fontSize: '17px',
-              color: 'black',
+              fontFamily: 'arial',
+              color: '#005cb3',
+              fontWeight: 'bold',
               textDecoration: 'none',
               paddingRight: '13px',
             }}

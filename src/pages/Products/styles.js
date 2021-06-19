@@ -24,6 +24,7 @@ export const DivListagemProdutos = styled.div`
   @media screen and (max-width: 700px) {
     flex-direction: column;
     margin-top: 10px;
+    margin-left: -35px;
   }
 `
 export const ProductContainer = styled.div`

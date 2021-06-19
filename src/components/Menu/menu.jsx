@@ -21,9 +21,10 @@ export default function SimpleMenu() {
         style={{
           // display: 'flex',
           listStyle: 'none',
-          fontFamily: 'Trebuchet',
-          fontSize: '17px',
-          color: 'black',
+          fontFamily: 'arial',
+          fontWeight: 'bold',
+          fontSize: '15px',
+          color: '#005cb3',
           textDecoration: 'none',
           paddingRight: '13px',
         }}

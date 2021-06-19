@@ -13,6 +13,5 @@ export const List = styled.li`
   list-style: none;
   font-family: Trebuchet;
   font-size: 15px;
-  color: gray;
   text-decoration: none;
 `
