@@ -14,7 +14,7 @@ export const CardContainer = styled.div`
   height: 262px;
   background: #cce6ff;
   border-radius: 12px;
-  margin-top: 6px;
+  margin-top: 13px;
   color: white;
   /* color: yellow; */
   font-size: 25px;
