@@ -58,7 +58,23 @@ export default function SimpleMenu() {
             Lista
           </Link>
         </MenuItem>
-        <MenuItem onClick={handleClose}>Cadastro</MenuItem>
+        <MenuItem onClick={handleClose}>
+          {' '}
+          <Link
+            to="/register"
+            style={{
+              // display: 'flex',
+              listStyle: 'none',
+              fontFamily: 'Trebuchet',
+              fontSize: '17px',
+              color: 'black',
+              textDecoration: 'none',
+              // paddingRight: '13px',
+            }}
+          >
+            Cadastrar
+          </Link>
+        </MenuItem>
         <MenuItem onClick={handleClose}>Perfil</MenuItem>
       </Menu>
     </div>
