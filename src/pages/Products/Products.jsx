@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import api from '../../services/api'
 import Header from '../Header/Header'
-import { Container } from './styles'
+import { Container, DivListagemProdutos } from './styles'
 
 function Products() {
   const [productsList, setProductsList] = useState([])
@@ -20,13 +20,7 @@ function Products() {
     <>
       <Header />
       <Container>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-          }}
-        >
+        <DivListagemProdutos>
           {productsList.map((item) => (
             <ul
               key={item.id}
@@ -56,7 +50,7 @@ function Products() {
               </li>
             </ul>
           ))}
-        </div>
+        </DivListagemProdutos>
       </Container>
     </>
   )

@@ -8,3 +8,13 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 `
+
+export const DivListagemProdutos = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+  }
+`
