@@ -36,3 +36,45 @@ export const ProductContainer = styled.div`
     margin-top: 20px;
   }
 `
+
+export const Input = styled.input`
+  /* background: red; */
+  border-radius: 12px;
+  height: 30px;
+  width: 90%;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  border: 2px solid #0069cc;
+`
+export const FormContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+`
+export const Label = styled.label`
+  margin-left: -190px;
+  font-family: 'Roboto';
+  font-size: 15px;
+  color: #0069cc;
+  margin-top: 10px;
+`
+
+export const InputFile = styled.input`
+  /* background: red; */
+  border-radius: 12px;
+  height: 30px;
+  width: 90%;
+  margin-bottom: 10px;
+  margin-top: 20px;
+`
+export const Button = styled.button`
+  width: 50%;
+  height: 30px;
+  background: #b3daff;
+  border: 1px solid #80c1ff;
+  border-radius: 10px;
+  color: #004f99;
+  margin-bottom: 40px;
+`
