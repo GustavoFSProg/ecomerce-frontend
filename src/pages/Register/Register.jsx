@@ -59,14 +59,14 @@ function Register() {
                 />
                 <Label>Nome: </Label>
                 <Input
-                  placeholder="Digite o Nome do Produto"
+                  // placeholder="Digite o Nome do Produto"
                   id="title"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
                 />
                 <Label>Preço: </Label>
                 <Input
-                  placeholder="Digite o Preço do Produto"
+                  // placeholder="Digite o Preço do Produto"
                   id="price"
                   value={price}
                   onChange={(e) => setPrice(e.target.value)}

@@ -1,15 +1,25 @@
 import React, { useEffect, useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import api from '../../services/api'
 import Header from '../Header/Header'
 import { Container, ProductContainer, DivListagemProdutos } from './styles'
 
 function Products() {
   const [productsList, setProductsList] = useState([])
+  const history = useHistory()
 
   async function getAllProducts() {
     const { data } = await api.get('/')
     setProductsList(data)
     return data
+  }
+
+  async function handleProductsId(id) {
+    localStorage.setItem('ID', id)
+
+    await api.get(`/${id}`)
+
+    history.push('/profile')
   }
 
   useEffect(() => {
@@ -116,6 +126,9 @@ function Products() {
                       {item.price}
                     </span>
                   </li>
+                  <button type="button" onClick={() => handleProductsId(item._id)}>
+                    Detalhes
+                  </button>
                 </div>
               </ul>
             </ProductContainer>

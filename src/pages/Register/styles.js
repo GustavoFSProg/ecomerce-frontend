@@ -39,12 +39,12 @@ export const ProductContainer = styled.div`
 
 export const Input = styled.input`
   /* background: red; */
-  border-radius: 12px;
-  height: 30px;
+  border-radius: 8px;
+  height: 45px;
   width: 90%;
   margin-bottom: 10px;
   margin-top: 5px;
-  border: 2px solid #0069cc;
+  border: 1px solid #0069cc;
 `
 export const FormContainer = styled.div`
   display: flex;
