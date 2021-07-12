@@ -15,7 +15,7 @@ import {
 
 function Register() {
   const [title, setTitle] = useState('')
-  // const [description, setDescription] = useState('')
+  const [description, setDescription] = useState('')
   const [price, setPrice] = useState('')
   const [image, setImage] = useState([])
 
@@ -28,7 +28,7 @@ function Register() {
       const data = new FormData()
 
       data.append('title', title)
-      // data.append('description', description)
+      data.append('description', description)
       data.append('price', price)
       data.append('image', image)
 
@@ -70,6 +70,13 @@ function Register() {
                   id="price"
                   value={price}
                   onChange={(e) => setPrice(e.target.value)}
+                />
+                <Label>Descrição: </Label>
+                <Input
+                  // placeholder="Digite o Preço do Produto"
+                  id="description"
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
                 />
                 <br />
                 <Button className="confirm-button" type="submit">

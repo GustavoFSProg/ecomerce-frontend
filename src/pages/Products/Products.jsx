@@ -122,13 +122,14 @@ function Products() {
                         color: '#005cb3',
                       }}
                     >
-                      {' '}
                       {item.price}
                     </span>
                   </li>
                   <button type="button" onClick={() => handleProductsId(item._id)}>
                     Detalhes
                   </button>
+
+                  <button type="button">Comprar</button>
                 </div>
               </ul>
             </ProductContainer>

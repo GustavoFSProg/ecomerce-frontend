@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../Header/Header'
-import Carousel from '../../components/Carousel/Carousel'
+import CarouselApp from '../../components/Carousel/Carousel'
 import { CardContainer, Container } from './styles'
 
 function Home() {
@@ -9,7 +9,7 @@ function Home() {
       <Header />
       <Container>
         <CardContainer>
-          <Carousel />
+          <CarouselApp />
         </CardContainer>
       </Container>
     </>

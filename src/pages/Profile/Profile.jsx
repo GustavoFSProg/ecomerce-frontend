@@ -75,6 +75,7 @@ function Profile() {
                   >
                     Produto:
                   </span>
+
                   <span
                     style={{
                       marginTop: '4px',
@@ -84,6 +85,28 @@ function Profile() {
                     }}
                   >
                     {productsList.title}
+                  </span>
+
+                  <span
+                    style={{
+                      fontWeight: 'bold',
+                      fontFamily: 'Arial',
+                      fontSize: '18px',
+                      color: '#004f99',
+                    }}
+                  >
+                    Descrição:
+                  </span>
+
+                  <span
+                    style={{
+                      marginTop: '4px',
+                      fontFamily: 'Arial',
+                      fontSize: '16px',
+                      color: '#005cb3',
+                    }}
+                  >
+                    {productsList.description}
                   </span>
                 </li>
                 <br />
