@@ -1,12 +1,28 @@
 import Header from './components/Header'
 import Main from './components/Main'
 import Basket from './components/Basket'
-import data from './data'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './index.css'
+import api from '../../services/api'
 
 function App() {
-  const { products } = data
+  const [productsList, setProductsList] = useState([])
+
+  const id = localStorage.getItem('ID')
+
+  async function getOneProducts() {
+    const { data } = await api.get(`/${id}`)
+    setProductsList(data)
+    return data
+  }
+
+  useEffect(() => {
+    getOneProducts()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  // const products =
+  //  productsList
   const [cartItems, setCartItems] = useState([])
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id)
@@ -32,7 +48,7 @@ function App() {
     <div className="App">
       <Header countCartItems={cartItems.length}></Header>
       <div className="row">
-        <Main products={products} onAdd={onAdd}></Main>
+        <Main products={productsList} onAdd={onAdd}></Main>
         <Basket cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}></Basket>
       </div>
     </div>

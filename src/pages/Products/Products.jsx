@@ -8,6 +8,14 @@ function Products() {
   const [productsList, setProductsList] = useState([])
   const history = useHistory()
 
+  async function handleCart(id) {
+    localStorage.setItem('ID', id)
+
+    // await api.get(`/${id}`)
+
+    history.push('/cart')
+  }
+
   async function getAllProducts() {
     const { data } = await api.get('/')
     setProductsList(data)
@@ -131,7 +139,7 @@ function Products() {
                   <BuyButton
                     className="buy-button"
                     type="button"
-                    onClick={() => history.push('/cart')}
+                    onClick={() => handleCart(item._id)}
                   >
                     Comprar
                   </BuyButton>
