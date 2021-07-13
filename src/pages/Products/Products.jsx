@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import api from '../../services/api'
 import Header from '../Header/Header'
-import { Container, ProductContainer, DivListagemProdutos } from './styles'
+import { Container, BuyButton, ProductContainer, DivListagemProdutos } from './styles'
 
 function Products() {
   const [productsList, setProductsList] = useState([])
@@ -60,7 +60,6 @@ function Products() {
                     alignItems: 'center',
                     justifyContent: 'space-between',
                     listStyle: 'none',
-                    // paddingRight: '10px',
                   }}
                 >
                   <li
@@ -125,11 +124,17 @@ function Products() {
                       {item.price}
                     </span>
                   </li>
-                  <button type="button" onClick={() => handleProductsId(item._id)}>
+                  <BuyButton type="button" onClick={() => handleProductsId(item._id)}>
                     Detalhes
-                  </button>
+                  </BuyButton>
 
-                  <button type="button">Comprar</button>
+                  <BuyButton
+                    className="buy-button"
+                    type="button"
+                    onClick={() => history.push('/cart')}
+                  >
+                    Comprar
+                  </BuyButton>
                 </div>
               </ul>
             </ProductContainer>

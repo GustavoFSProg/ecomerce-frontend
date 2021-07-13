@@ -5,6 +5,7 @@ import Header from './pages/Header/Header'
 import Products from './pages/Products/Products'
 import Register from './pages/Register/Register'
 import Profile from './pages/Profile/Profile'
+import Cart from './components/Cart/App'
 
 export default function Routes() {
   return (
@@ -15,6 +16,7 @@ export default function Routes() {
         <Route path="/products" component={Products} />
         <Route path="/register" component={Register} />
         <Route path="/profile" component={Profile} />
+        <Route path="/cart" component={Cart} />
       </Switch>
     </BrowserRouter>
   )

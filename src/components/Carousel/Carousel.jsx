@@ -1,13 +1,9 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useEffect, useState } from 'react'
-// import Carousel from 'react-elastic-carousel'
 import { Carousel } from 'react-responsive-carousel'
-// import PC1 from '../../assets/pc-1.jpg'
-// import PC2 from '../../assets/pc-2.jpg'
-// import PC3 from '../../assets/pc-3.jpg'
+
 import { ContainerCarousel } from './style'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
-// import { useHistory } from 'react-router-dom'
 import api from '../../services/api'
 
 function CarouselApp() {

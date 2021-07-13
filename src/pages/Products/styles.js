@@ -36,3 +36,6 @@ export const ProductContainer = styled.div`
     margin-top: 20px;
   }
 `
+export const BuyButton = styled.button`
+  background: lightgreen;
+`
