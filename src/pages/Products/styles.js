@@ -37,5 +37,25 @@ export const ProductContainer = styled.div`
   }
 `
 export const BuyButton = styled.button`
-  background: lightgreen;
+  background: #b3daff;
+  border: 1px solid #99ceff;
+  margin-top: 7px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-family: 'Roboto';
+  color: #1a90ff;
+  font-weight: bold;
+  font-size: 13px;
+`
+export const ButtonsContainer = styled.div`
+  /* margin-left: -30px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: -30px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 `

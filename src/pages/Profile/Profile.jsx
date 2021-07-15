@@ -7,10 +7,10 @@ import { CartContext } from '../../Contexts/CartContext'
 function Profile() {
   const [productsList, setProductsList] = useState([])
 
-  // const id = localStorage.getItem('ID')
+  const id = localStorage.getItem('ID')
   // eslint-disable-next-line no-unused-vars
   const { productId, setProductId } = useContext(CartContext)
-  const id = productId
+  // const id = productId
 
   console.log(id)
 

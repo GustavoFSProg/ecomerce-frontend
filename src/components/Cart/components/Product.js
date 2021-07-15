@@ -10,11 +10,17 @@ export default function Product(props) {
   const { productId, setProductId } = useContext(CartContext)
 
   async function getOneProducts() {
-    const id = productId
+    // const id = productId
+    const id = localStorage.getItem('ID')
 
-    console.log(`productId-context: ${productId}`)
-    // const id = localStorage.getItem('ID')
+    setProductId(...productId, productId)
+
+    console.log(`productId-context: ${id}`)
+
+    // productId.map(item => {
+
     const { data } = await api.get(`/${id}`)
+    // })
 
     setProductsList(data)
 

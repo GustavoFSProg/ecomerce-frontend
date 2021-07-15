@@ -2,7 +2,13 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import api from '../../services/api'
 import Header from '../Header/Header'
-import { Container, BuyButton, ProductContainer, DivListagemProdutos } from './styles'
+import {
+  Container,
+  BuyButton,
+  ButtonsContainer,
+  ProductContainer,
+  DivListagemProdutos,
+} from './styles'
 import { CartContext } from '../../Contexts/CartContext'
 
 function Products() {
@@ -15,7 +21,8 @@ function Products() {
     localStorage.setItem('ID', id)
     setProductId(id)
 
-    await api.get(`/${id}`)
+    // const data = await api.get(`/${id}`)
+    // setProductsList(data)
 
     history.push('/cart')
   }
@@ -36,7 +43,8 @@ function Products() {
 
   useEffect(() => {
     getAllProducts()
-  }, [])
+    // handleCart(productId)
+  }, [productId])
 
   return (
     <>
@@ -136,17 +144,19 @@ function Products() {
                       {item.price}
                     </span>
                   </li>
-                  <BuyButton type="button" onClick={() => handleProductsId(item._id)}>
-                    Detalhes
-                  </BuyButton>
+                  <ButtonsContainer>
+                    <BuyButton type="button" onClick={() => handleProductsId(item._id)}>
+                      Detalhes
+                    </BuyButton>
 
-                  <BuyButton
-                    className="buy-button"
-                    type="button"
-                    onClick={() => handleCart(item._id)}
-                  >
-                    Comprar
-                  </BuyButton>
+                    <BuyButton
+                      className="buy-button"
+                      type="button"
+                      onClick={() => handleCart(item._id)}
+                    >
+                      Comprar
+                    </BuyButton>
+                  </ButtonsContainer>
                 </div>
               </ul>
             </ProductContainer>
