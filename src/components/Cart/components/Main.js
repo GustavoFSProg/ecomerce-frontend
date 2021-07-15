@@ -1,19 +1,22 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Product from './Product'
 import '../index.css'
 import api from '../../../services/api'
+import { CartContext } from '../../../Contexts/CartContext'
 
 export default function Main(props) {
   const [productsList, setProductsList] = useState([])
+  const { productId, setProductId } = useContext(CartContext)
 
   async function getOneProducts() {
-    const id = localStorage.getItem('ID')
+    const id = productId
+    // const id = localStorage.getItem('ID')
     const { data } = await api.get(`/${id}`)
 
     setProductsList(data)
 
-    console.log(data)
+    console.log(productId)
 
     return data
   }

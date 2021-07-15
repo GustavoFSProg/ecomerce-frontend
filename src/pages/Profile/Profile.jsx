@@ -1,12 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import api from '../../services/api'
 import Header from '../Header/Header'
 import { Container, ProductContainer, DivListagemProdutos } from './styles'
+import { CartContext } from '../../Contexts/CartContext'
 
 function Profile() {
   const [productsList, setProductsList] = useState([])
 
-  const id = localStorage.getItem('ID')
+  // const id = localStorage.getItem('ID')
+  // eslint-disable-next-line no-unused-vars
+  const { productId, setProductId } = useContext(CartContext)
+  const id = productId
+
+  console.log(id)
 
   async function getOneProducts() {
     const { data } = await api.get(`/${id}`)

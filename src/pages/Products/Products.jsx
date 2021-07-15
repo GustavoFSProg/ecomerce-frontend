@@ -1,17 +1,21 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import api from '../../services/api'
 import Header from '../Header/Header'
 import { Container, BuyButton, ProductContainer, DivListagemProdutos } from './styles'
+import { CartContext } from '../../Contexts/CartContext'
 
 function Products() {
   const [productsList, setProductsList] = useState([])
   const history = useHistory()
+  // eslint-disable-next-line no-unused-vars
+  const { productId, setProductId } = useContext(CartContext)
 
   async function handleCart(id) {
     localStorage.setItem('ID', id)
+    setProductId(id)
 
-    // await api.get(`/${id}`)
+    await api.get(`/${id}`)
 
     history.push('/cart')
   }
