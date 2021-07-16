@@ -36,16 +36,18 @@ export default function Product(props) {
 
   return (
     <div>
-      <img
-        className="small"
-        src={`https://ecomerce-api.herokuapp.com/files/${productsList.image}`}
-        alt={productsList.title}
-      />
-      <h3>{productsList.title}</h3>
-      <div>${productsList.price}</div>
-      <div>
-        <button onClick={() => onAdd(productsList)}>Add To Cart</button>
-      </div>
+      <>
+        <img
+          className="small"
+          src={`https://ecomerce-api.herokuapp.com/files/${productsList.image}`}
+          alt={productsList.title}
+        />
+        <h3>{productsList.title}</h3>
+        <div>${productsList.price}</div>
+        <div>
+          <button onClick={() => onAdd(productsList)}>Add To Cart</button>
+        </div>
+      </>
     </div>
   )
 }
